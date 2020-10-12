@@ -8,8 +8,8 @@ public class IO_tridy {
         print - tisk do jednoho řádku
         println - přidá k textu na konec \n
          */
-        int velikost_pole = 1;
-        double [] pole = new double[velikost_pole];
+        int velikost_pole = 1;  // specifikuje velikost těch polí
+        double [] pole = new double[velikost_pole];  // vytvoří pole ve kterém jsou double
         Scanner scanner = new Scanner(System.in);
 
         String retezec;
@@ -30,13 +30,13 @@ public class IO_tridy {
             }
         }
         for(double iterator: pole) {
-            System.out.print(iterator + " ");
+            System.out.print(iterator + " ");  // vyprintuje to zadané pole přes scanner
         }
 
         char [] text = new char[]{'a', 'b', 'c', 'd'};
         try (FileWriter writer = new FileWriter("soubor.txt")) {
-            writer.write(text[1]);
-        } catch (IOException ex) {
+            writer.write(text[1]);  // umí zapisovat jen char
+        } catch (IOException ex) {  // ex je výjimka co se stala a IOException je chyba co to odchytne
             System.out.println("Došlo k výjimce " + ex);
         }
 
@@ -50,7 +50,7 @@ public class IO_tridy {
         Scanner scanner2 = new Scanner(System.in);
         System.out.print("Zadejte text pro zapsání do souboru: ");
         lol = scanner2.nextLine();
-        try(BufferedWriter bw = new BufferedWriter(new FileWriter("soubor.txt", true))) {
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter("soubor.txt", true))) {  // ano musí být napsáno takhle složitě
             bw.write(lol + "\n");
         } catch (IOException ex) {
             System.out.println("hhmmmmm");
