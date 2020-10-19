@@ -1,3 +1,5 @@
+package com.zacatky;
+
 public class Main {
     public static void main(String[] args) {
         char znak = 104;

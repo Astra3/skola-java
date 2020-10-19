@@ -1,3 +1,5 @@
+package com.zacatky;
+
 import java.util.Random;
 
 public class suda_cisla_random {
