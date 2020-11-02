@@ -6,11 +6,17 @@ public class Student {
     private String jmeno;
     private String prijmeni;  //Refactor - encapsulate fields vygeneruje Getter a Setter automaticky
     private int rok_narozeni;
+    private int[] znamky;
+    private double prumer_znamek;
+    private Adresa adresa;
 
-    public Student(String jmeno, String prijmeni, int rok_narozeni) {
+    public Student(String jmeno, String prijmeni, int rok_narozeni, int[] znamky, Adresa adresa) {
         setJmeno(jmeno);
         setPrijmeni(prijmeni);
         setRok_narozeni(rok_narozeni);
+        setZnamky(znamky);
+        // Zde se vytváří nový objekt adresy, je to kvůli tomu aby nevznikla kolize mezi objekty
+        this.adresa = new Adresa(adresa.getUlice(), adresa.getCislo_popisne(), adresa.getMesto(), adresa.getPsc());
     }
 
     public String getJmeno() {
@@ -39,5 +45,30 @@ public class Student {
         } else {
             this.rok_narozeni = rok_narozeni;
         }
+    }
+
+    public int[] getZnamky() {
+        return znamky;
+    }
+
+    public void setZnamky(int[] znamky) {
+        this.znamky = znamky;
+        setPrumer_znamek();
+    }
+
+    public double getPrumer_znamek() {
+        return prumer_znamek;
+    }
+
+    private void setPrumer_znamek() {
+        double prumer = 0;
+        for (int i: znamky) {
+            prumer += i;
+        }
+        this.prumer_znamek = prumer / znamky.length;
+    }
+
+    public Adresa getAdresa() {
+        return adresa;
     }
 }
