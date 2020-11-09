@@ -12,7 +12,7 @@ public class dynamicke_listy {
 
         ArrayList<Student> dynamicke_pole = new ArrayList<Student>();
         for (int i = 0; i < 100; i++) {
-            dynamicke_pole.add(new Student("Ondřej", "Kukučka", 2002, new int[]{1, 1, 1, 1, 1}, new Adresa("Šafaříkova", "164", "Valašské Meziříčí", "75701")));
+            dynamicke_pole.add(new Student("Ondřej", "Kukučka", 2002, new int[]{1, 1, 2, 1, 1}, new Adresa("Šafaříkova", "164", "Valašské Meziříčí", "75701")));
         }
         System.out.println("done");
     }
