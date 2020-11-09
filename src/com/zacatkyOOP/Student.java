@@ -1,4 +1,4 @@
-package začátkyOOP;
+package com.zacatkyOOP;
 
 import java.util.Calendar;
 

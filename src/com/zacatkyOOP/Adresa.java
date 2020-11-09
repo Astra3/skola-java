@@ -1,4 +1,4 @@
-package začátkyOOP;
+package com.zacatkyOOP;
 
 public class Adresa {
     private String ulice;
