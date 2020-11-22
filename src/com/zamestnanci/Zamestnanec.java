@@ -11,7 +11,8 @@ public class Zamestnanec {
     private final ArrayList<String> den;
 
     /**
-     * Třída pro zaměstnance, vytvoří docházku ze souboru, když nenajde soubor bude docházka prázdná
+     * Třída pro zaměstnance, vytvoří docházku ze souboru, když nenajde soubor bude docházka prázdná.
+     * Potřeba zakončit program metodou .exit()
      * @param jmeno jméno zaměstnance
      * @param prijmeni příjmení zaměstnance
      * @param zarazeni enum zařazení zaměstnance
