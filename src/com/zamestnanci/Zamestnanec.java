@@ -24,7 +24,7 @@ public class Zamestnanec {
         this.den = new ArrayList<>();
         this.dochazka = new ArrayList<>();
         try {
-            BufferedReader file = new BufferedReader(new FileReader("zaměstnanci/" + this.jmeno + " " + this.prijmeni + ".txt"));
+            BufferedReader file = new BufferedReader(new FileReader("soubory/zaměstnanci/" + this.jmeno + " " + this.prijmeni + ".txt"));
             String text = "";
             String line = file.readLine();
             while( (line != null) && (!line.isEmpty()) ) {
