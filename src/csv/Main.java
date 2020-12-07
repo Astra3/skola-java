@@ -21,16 +21,13 @@ public class Main {
        */
 
        StudentIface databaze1 = new Databaze();
-       StudentIface databaze2 = new Databaze_SQL();
 
-       databaze1.connect("d:/Java/Databazovy_system/databaze.csv");
-       databaze2.connect("d:/Java/Databazovy_system/databazeSQL.csv");
+       String cesta = "/home/roman/IdeaProjects/Škola/soubory/studenti/students.csv";
+       databaze1.connect(cesta);
 
-       databaze1.readLine(2);
-       databaze2.readLine(10);
-
+       Student a = databaze1.readLine(2);
+       System.out.println(a.getVek());
        databaze1.disconnect();
-       databaze2.disconnect();
 
 
 
