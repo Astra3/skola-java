@@ -42,7 +42,7 @@ public class Databaze implements StudentIface {
         finally {
             if(connected)
             {
-                CSVFileWriter.writeCsvFile(databaze.getAbsolutePath(), student);
+                CSVFileWriter.writeCsvFile(databaze.getAbsolutePath(), student, true);
                 return true;
             }
             else
@@ -64,7 +64,7 @@ public class Databaze implements StudentIface {
         finally {
             if(connected)
             {
-                CSVFileWriter.writeCsvFile(databaze.getAbsolutePath(), seznam_studentu);
+                CSVFileWriter.writeListCsvFile(databaze.getAbsolutePath(), seznam_studentu, true);
                 return true;
             }
             else
