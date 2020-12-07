@@ -1,16 +1,19 @@
 package csv;
 
 public class Student {
+
     private String id;
     private String jmeno;
     private String prijmeni;
     private String vek;
 
-    public Student() {
+    public Student()
+    {
 
     }
 
-    public Student(String id, String jmeno, String prijmeni, String vek) {
+    public Student(String id, String jmeno, String prijmeni, String vek)
+    {
         setId(id);
         setJmeno(jmeno);
         setPrijmeni(prijmeni);
